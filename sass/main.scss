@@ -69,6 +69,14 @@ header {
 main {
 
     //Global
+    
+    .multiline-ellipsis {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+        white-space: pre-wrap; /* let the text wrap preserving spaces */
+    }
     .article--description {
         font-size: .9rem;
         .article--description__link{
@@ -78,31 +86,18 @@ main {
     }
     //Specific
     .embed-responsive {
-        max-width: 660px;
+        
     }
     
     .univers-biblio {
         section {
             .article-home {
-                width: 30%;
                 img {
-                    max-width: 250px;
                 }
                 .article--tag {
                     font-size: .7rem;
                 }
             }  
-        }
-    }
-    .abonnement-revues, .documentalistes, .rdi {
-        section {
-            .article-home {
-                width: 100%;
-                max-width: 600px;
-                img {
-                    max-width: 200px;
-                }
-            }
         }
     }
     .abonnement-thematiques, .bibliotheque {
