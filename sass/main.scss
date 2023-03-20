@@ -1,0 +1,113 @@
+/* CUSTOM VARIABLES */
+
+//negative margins
+$enable-negative-margins: true;
+
+//colors
+$primary: #00a550;
+$secondary: #cab93e;
+
+/* FUNCTIONS AND VARIABLES */
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+    "primary-dark": #00652E,
+    "tertiary": #17707e,
+    "grey": #eeeeee
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+/* BOOTSTRAP */
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+/* CUSTOM CSS */
+.logo {
+    max-width: 200px;
+}
+//header
+header {
+    .container {
+        max-width: none;  
+    }
+}
+.hero {
+    height: 600px;
+    background: url('../assets/hero-img.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.form-container {
+    height: 250px;
+    .form-search--container {
+        .form-search {
+            .form-control {
+                background: none;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: white;
+                    font-size: 2.5rem;
+                    line-height: 5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+//main
+main {
+    .embed-responsive {
+        max-width: 660px;
+    }
+    
+    .univers-biblio {
+        section {
+            .article-home {
+                width: 30%;
+                img {
+                    max-width: 250px;
+                }
+                .article--tag {
+                    font-size: .7rem;
+                }
+            }  
+        }
+    }
+    .abonnement-revues {
+        section {
+            .article-home {
+                width: 100%;
+                max-width: 600px;
+                img {
+                    max-width: 200px;
+                }
+                .article--description {
+                    font-size: .9rem;
+                    .article--description__btn{
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    .abonnement-thematiques {
+        section {
+            .article-home {
+    //             width: 100%;
+    //            max-width: 400px;
+                img {
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+}
+
+//footer
+footer {
+    
+}
