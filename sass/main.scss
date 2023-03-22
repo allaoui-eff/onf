@@ -14,7 +14,9 @@ $secondary: #cab93e;
 $custom-theme-colors: (
     "primary-dark": #00652E,
     "tertiary": #17707e,
-    "grey": #eeeeee
+    "grey": #eeeeee,
+    "black": #1e1e1e,
+    "red": #e04f5f,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
@@ -44,6 +46,20 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     font-size: .9rem;
     .article--description__link{
         max-width: 250px;
+    }
+}
+.icon-link--rounded {
+    width: 24px;
+    height: 24px;
+}
+.search-modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    > div {
+        width: 100%;
+        max-width: 900px;
     }
 }
 //header

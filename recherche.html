@@ -11,7 +11,7 @@
   </head>
   <body>
 
-    <header class="px-5 py-3 border-bottom">
+    <header class="px-5 py-3 border-bottom position-relative bg-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between">
           <a href="/" class="logo col-auto mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -40,7 +40,7 @@
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
             </a>
-            <ul class="dropdown-menu text-small">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">New project...</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -51,6 +51,39 @@
         </div>
       </div>
     </header>
+
+    <div class="search-modal d-none justify-content-center align-items-center position-fixed top-0">
+        <div class="position-relative bg-white p-4">
+            <button class="d-block close-btn border-0 bg-transparent ms-auto p-0"><i class="bi bi-x-circle-fill fs-3 text-red"></i></button>
+            <div class="d-flex align-items-start mt-4">
+                <input class="mt-1 me-2" type="checkbox" name="search-modal-checkbox" />
+                <div class="flex-fill pe-4 small">
+                    <label class="text-primary fw-bold mb-2" for="search-modal-checkbox">Mémoire d'élève</label>
+                    <p class="fw-bold lh-sm btn-hover-light"><a class="text-dark text-decoration-none" href="">La sylviculture influence-t-elle la productivité forestière : confrontation à la seconde loi d'Eichhorn dans sept forêts domaniales du quart Nord-Ouest de la France</a></p>
+                    <p class="lh-sm">Beauvallet, Zenon</p>
+                    <p>2013 - BTSA Gestion forestière, Non précisé - Compiègne : ONF. Pôle RDI de Fontainebleau / Compiègne - 29 p., ann.</p>
+                    <p><span class="border border-black rounded-2 px-1">100 / 100</span> ID <span class="text-tertiary fw-bold">86252</span></p>
+                    <div class="d-flex">
+                        <p class="col-2 fw-bold text-decoration-underline">Mots clés :</p>
+                        <p class="flex-fill">Gestion forestière; Productivité; Station forestière; ONF; Expérience ONF; Table de production; Fertilité; Surface terrière; Essonne (91); Eure (27);</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="col-2 fw-bold text-decoration-underline">Forêt :</p>
+                        <p class="flex-fill">Forêt dominiale de la Haye-D'Aubenton (02); Forêt dominiale d'Eawy (76); Forêtdominiale de Compiègne (60); Forêt dominiale de Retz (02);</p>
+                    </div>
+                    <div class="text-tertiary">
+                        <p><span class="text-decoration-underline fw-bold">Type de production :</span> Production en propre <br>
+                        Pôle / équipe : Pôle Fontainebleau / Compiègne</p>
+                    </div>
+                    
+                </div>
+                <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+            </div>
+            <p class="d-flex align-items-center fw-semibold fs-5 ps-3"><i class="bi bi-chat-fill fs-3 pe-3 text-tertiary"></i>Commentaires</p>
+            <h2 class="fs-5 text-tertiary ps-3">Disponibilité des exemplaires papier</h2>
+            <p class="d-flex flex-wrap justify-content-between align-items-center px-3 bg-grey">Fontainebleau : 1 exemplaire disponible disponible - Cote : MAG-201 <span class="d-flex align-items-center"><i class="bi bi-caret-right-fill text-tertiary fs-2"></i> Afficher le détail</span></p>
+        </div>
+    </div>
 
     <section class="hero hero-recherche container-fluid d-flex align-items-center ps-3 p-sm-0 text-white">
       <h1 class="ps-5 pb-5 mb-5 display-1 fw-bold">Votre résultat de recherche</h1>
@@ -71,8 +104,8 @@
     </section>
 
     <main class="d-flex flex-column px-4">
-        <form class="d-flex flex-column pt-5">
-            <div class="d-flex justify-content-start align-items-center pt-5">
+        <form class="d-flex flex-column">
+            <div class="d-flex flex-wrap justify-content-start align-items-center pt-5">
                 <p class="me-4 fw-bold">Page</p>
                 <ul class="d-flex gap-2 list-unstyled">
                     <li class="px-3 py-1 border fw-bold bg-primary text-white current">1</li>
@@ -83,11 +116,11 @@
                 </ul>
             </div>
             <div class="mt-4">
-                <ul class="d-flex gap-4 list-unstyled">
+                <ul class="d-flex flex-wrap gap-4 list-unstyled">
                     <li><button class="bg-primary-dark text-white border-1 border-primary-dark rounded-1 px-5 py-2">Filtrer les résultats</button></li>
                     <li><button class="bg-primary-dark text-white border-1 border-primary-dark rounded-1 px-5 py-2">Action groupée</button></li>
                     <li><button class="bg-primary-dark text-white border-1 shadow-none border-primary- rounded-1 px-5 py-2">Modifier la recherche</button></li>
-                    <li class="dropdown"><button class="dropdown-toggle bg-transparent border-1 rounded-1 px-5 py-2">Tri par pertinence</button></li>
+                    <li class="dropdown position-static"><button class="dropdown-toggle bg-transparent border-1 rounded-1 px-5 py-2">Tri par pertinence</button></li>
                 </ul>
             </div>
             <div class="d-flex justify-content-start align-items-center pb-4 mb-4 border-5 border-grey border-start-0 border-top-0 border-end-0 border-bottom">
@@ -95,18 +128,167 @@
                 <label for="check-all" class="fw-semibold fs-4">0 sélectionnée(s) / 649 réponse(s)</label>
             </div>
 
-            <section>
-                <article>
+            <section class="d-flex flex-wrap justify-content-center justify-content-lg-start">
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
                     <input type="checkbox" />
-                    <div>
-                        <img>
-                        <div>
-                            <p><span>Livre</span> : La forêt une réponse contre le réchauffement cimatique</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-xs-12 col-sm-8 ps-xs-0 ps-sm-4 pt-4 pt-sm-0">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
                             <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
-                            <p>FNCOFOR Fédération nationale des communes forestières de France</p>
-                            <p><span>Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
-                            <p><span>Dossier :</span> Crédits carbone : que fait la forêt ?</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
                         </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
+                    </div>
+                </article>
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
+                    <input type="checkbox" />
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-xs-12 col-sm-8 ps-xs-0 ps-sm-4 pt-4 pt-sm-0">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
+                            <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
+                    </div>
+                </article>
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
+                    <input type="checkbox" />
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-xs-12 col-sm-8 ps-xs-0 ps-sm-4 pt-4 pt-sm-0">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
+                            <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
+                    </div>
+                </article>
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
+                    <input type="checkbox" />
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-xs-12 col-sm-8 ps-xs-0 ps-sm-4 pt-4 pt-sm-0">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
+                            <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
+                    </div>
+                </article>
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
+                    <input type="checkbox" />
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-8 ps-4">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
+                            <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
+                    </div>
+                </article>
+                <article class="col-11 col-lg-6 col-xxl-4 pe-4 pb-5 mb-4 border border-2 border-grey border-start-0 border-top-0 border-end-0">
+                    <input type="checkbox" />
+                    <div class="d-flex flex-wrap justify-content-between align-items-start">
+                        <a class="col-4" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
+                        <div class="col-8 ps-4">
+                            <p class="text-primary fw-bold"><span class="text-black">Livre :</span> La forêt une réponse contre le réchauffement cimatique</p>
+                            <p>2006 - Forêt entreprise, n°168, pp, 40-42, ISBN 2-04-76-00-18-9</p>
+                            <p class="text-secondary fw-bold">FNCOFOR Fédération nationale des communes forestières de France</p>
+                            <p><span class="fw-bold">Résumé :</span> La Fédération nationale des Communes forestières appelle de ses voeux un développement de l'utilisation du bois sous toutes ses formes dans le but de valoriser le travail du sylviculteur...</p>
+                            <p><span class="fw-bold">Dossier :</span> Crédits carbone : que fait la forêt&nbsp;?</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-secondary rounded-circle p-4" href="#"><i class="bi bi-eye-fill text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-filetype-pdf text-white fs-3"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-tertiary rounded-circle p-4" href="#"><i class="bi bi-globe text-white fs-3"></i></a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-download text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-suit-heart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-printer-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-cart-fill text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-link-45deg text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-front text-white fs-5"></i></a>
+                        <a class="icon-link--rounded d-flex justify-content-center align-items-center bg-primary rounded-circle p-3" href="#"><i class="bi bi-pencil-square text-white fs-5"></i></a>
                     </div>
                 </article>
             </section>
