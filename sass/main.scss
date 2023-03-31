@@ -80,6 +80,11 @@ header {
         background-size: cover;
         background-position: bottom;
     }
+    &.hero-infos-pratiques {
+        background: url('../assets/hero-infos-pratiques.jpg');        
+        background-size: cover;
+        background-position: bottom;
+    }
 }
 .form-container {
     height: 250px;
@@ -102,13 +107,10 @@ header {
 }
 //main
 main {
-    //Specific
-    
+    //HOME
     .univers-biblio {
         section {
             .article-home {
-                img {
-                }
                 .article--tag {
                     font-size: .7rem;
                 }
@@ -133,9 +135,24 @@ main {
             }
         }
     }
-}
-
-//footer
-footer {
-    
+    //INFOS PRATIQUES
+    .tabs-container {
+        .nav-link {
+            border: none;
+            background: linear-gradient(to right, #00a550, #00652E);
+            color: $white;
+            &.active {
+                background: $secondary;
+                color: $white;
+            }
+        }
+    }
+    //ABONNEMENTS
+    .accordion {
+        .accordion-button {
+            &::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+        }
+    }
 }

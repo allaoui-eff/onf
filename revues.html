@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,15 +81,15 @@
       </div>
     </header>
 
-    <section class="hero hero-home container-fluid d-flex align-items-center ps-3 p-sm-0 text-white">
-      <h1 class="ps-5 pb-5 mb-5 display-1 fw-bold">Bienvenue <br>sur notre portail biblio.</h1>
+    <section class="hero hero-infos-pratiques container-fluid d-flex align-items-center ps-3 p-sm-0 text-white">
+      <h1 class="ps-5 pb-5 mb-5 display-1 fw-bold">Revues ONF</h1>
     </section>
 
     <div class="container-fluid form-container bg-secondary mb-lg-0 p-0 d-flex flex-wrap text-white">
       <div class="form-search--container d-flex justify-content-center align-items-start flex-column gap-3 ps-5 py-sm-5 col-12 col-sm-7 col-md-7 col-lg-8">
         <form class="form-search d-flex justify-content-center align-items-center col-lg-8" role="search">
           <input type="search" class="form-control border border-start-0 border-top-0 border-end-0 border-bottom-1 rounded-0 ps-0 fs-3 text-white" placeholder="Recherche..." aria-label="Search">
-          <i class="bi bi-search fs-4 ms-n4"></i>
+          <i class="bi bi-search fs-4"></i>
         </form>
         <a href="#" class="nav-link px-2 py- dropdown-toggle py-2 border border-2  rounded-pill">Recherche avancée</a>
       </div>
@@ -99,357 +99,152 @@
       </div>
     </div>
 
-    <main class="d-flex flex-column px-4">
-      <!-- CTAs + VIDEO -->
-      <div class="d-flex justify-content-center align-items-center flex-column py-5">
-        <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
-          <a class="btn btn-lg rounded-pill px-4 bg-primary-dark text-white" href=""><i class="bi bi-person-plus-fill"></i> S'informer</a>
-          <a class="btn btn-lg rounded-pill px-4 bg-primary-dark text-white" href=""><i class="bi bi-puzzle-fill"></i> Contribuer</a>
-        </div>
-
-        <div class="ratio ratio-16x9 mt-5 scale">
-          <iframe class="embed-responsive-item p-2 border border-1" src="https://www.youtube.com/embed/Q9yIutVqMwk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <!-- UNIVERS BIBLIO -->
-      <div class="univers-biblio d-flex flex-column justify-content-center align-items-center mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-grey text-primary-dark fw-bold col-12">Tout l'univers biblio</h2>
-
-        <div class="d-flex justify-content-center align-items-center col-12 col-lg-8 gap-4">
-          <div class="article-home d-flex justify-content-center align-items-center flex-column mx-2">
-            <a class="mb-4 position-relative" href=""><img class="img-fluid" src="/assets/univers-biblio-1.png" alt=""><span class="article--tag bg-tertiary text-white text-uppercase px-4 py-1 position-absolute start-0">brèves</span></a>
-            <a class="btn px-3 py-2 rounded-1 bg-tertiary text-white fw-bold shadow-sm" href="">Voir toutes les brèves</a>
+    <main class="d-flex flex-column bg-grey p-4">
+      <div class="tabs-container mb-5 px-5">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-sommaires-revues-tab" data-bs-toggle="tab" data-bs-target="#nav-sommaires-revues" type="button" role="tab" aria-controls="nav-sommaires-revues" aria-selected="true">Derniers sommaires de revues</button>
+            <button class="nav-link" id="nav-articles-revues-tab" data-bs-toggle="tab" data-bs-target="#nav-articles-revues" type="button" role="tab" aria-controls="nav-articles-revues" aria-selected="false">Derniers articles de revues</button>
+            <button class="nav-link" id="nav-selection-documentalistes-tab" data-bs-toggle="tab" data-bs-target="#nav-selection-documentalistes" type="button" role="tab" aria-controls="nav-selection-documentalistes" aria-selected="false">Sélection des documentalistes</button>
           </div>
-          
-          <div class="article-home d-flex justify-content-center align-items-center flex-column mx-2">
-            <a class="mb-4 position-relative" href=""><img class="img-fluid" src="/assets/univers-biblio-2.png" alt=""><span class="article--tag bg-primary text-white text-uppercase px-4 py-1 position-absolute start-0">évènements</span></a>
-            <a class="btn px-3 py-2 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Voir tous les évènements</a>
-          </div>
-          
-          <div class="article-home d-flex justify-content-center align-items-center flex-column mx-2">
-            <a class="mb-4 position-relative" href=""><img class="img-fluid" src="/assets/univers-biblio-3.png" alt=""><span class="article--tag bg-secondary text-white text-uppercase px-4 py-1 position-absolute start-0">documents</span></a>
-            <a class="btn px-3 py-2 rounded-1 bg-secondary text-white fw-bold shadow-sm" href="">Voir tous les documents</a>
-          </div>
-        </div>
-        
-      </div>
-
-      <!-- ABONNEMENTS REVUES -->
-      <div class="abonnement-revues d-flex flex-column justify-content-center align-items-center bg-grey mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-primary-dark text-primary-dark fw-bold col-12">Du nouveau dans mes abonnements de revues</h2>
-        
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center col-12 col-lg-8 gap-4">
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
+        </nav>
+        <div class="tab-content bg-white px-5 py-4 shadow-md" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-sommaires-revues" role="tabpanel" aria-labelledby="nav-sommaires-revues-tab">
+            <!-- Accordion -->
+            <div class="accordion">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button bg-tertiary text-white border border-start-0 border-top-0 border-end-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    La Forêt privée, n° 389 - 2023
+                  </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body px-5">
+                    <p class="mb-0">La Forêt privée, n° 389 - 2023</p>
+                    <p class="mb-0">La Forêt privée, n° 388 - 2022</p>
+                    <p class="mb-0">La Forêt privée, n° 387 - 2022</p>
+                    <p class="mb-0">La Forêt privée, n° 386 - 2021</p>
+                    <div class="d-flex justify-content-center py-2">
+                      <button class="btn btn-tertiary">Afficher + de sommaires</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed bg-tertiary text-white border border-start-0 border-top-0 border-end-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ADEME Magazines
+                  </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed bg-tertiary text-white border border-start-0 border-top-0 border-end-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Le Bois international
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed bg-tertiary text-white border border-start-0 border-top-0 border-end-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    La Forêt
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed bg-tertiary text-white border border-start-0 border-top-0 border-end-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    La Rendez-vous technique de l'ONF
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
+          <div class="tab-pane fade" id="nav-articles-revues" role="tabpanel" aria-labelledby="nav-articles-revues-tab">
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 pt-0 pb-3">
+              <h2 class="h5 text-primary-dark mb-3">Le centre de documentation technique et générale, à Paris</h2>
+              <p class="text-secondary fw-semibold mb-1">La Documentation technique et générale se situe à l'Arborial</p>
+              <p class="small fw-semibold mt-0 mb-2">
+                  10 rue Henri Roi-Tanguy à Montreuil<br>
+                  1er étage bureau 01-185<br>
+                  Montreuil
+              </p>
+              <p class="text-secondary fw-semibold mb-1">Pour le courrier (retours des prêts), l'adresse postale est :</p>
+              <p class="small fw-semibold mt-0 mb-2">
+                  ONF - Documentation technique et générale<br>
+                  2 avenue de Saint-Mandé<br>
+                  75570 Paris Cedex 12
+              </p>
+            </div>
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 py-3">
+                <h2 class="h5 text-primary-dark mb-3">Le centre de documentation technique et générale, à Fontainebleau</h2>
+                <p class="text-secondary fw-semibold mb-1">ONF - Documentation technique et générale</p>
+                <p class="small fw-semibold mt-0 mb-2">
+                    Bâtiment B<br>
+                    Boulevard de Constance<br>
+                    77300 Fontainebleau
+                </p>
+            </div>
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 py-3">
+                <h2 class="h5 text-primary-dark mb-3">Le centre de ressources du Centre national de formation, à Villiers-lès-Nancy</h2>
+                <p class="text-secondary fw-semibold mb-1">ONF - Centre national de formation</p>
+                <p class="small fw-semibold mt-0 mb-2">
+                    Centre de ressources<br>
+                    8 allée de Longchamp - CS 40212<br>
+                    54602 Villiers-lès-Nancy Cedex
+                </p>
             </div>
           </div>
-        </div>
-        <div class="d-flex flex-column mt-4 gap-1">
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Toutes les nouvelles revues</a>
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Gérer mes alertes sur mes revues</a>
-        </div>
-      </div>
-
-      <!-- ABONNEMENTS THEMATIQUES -->
-      <div class="abonnement-thematiques d-flex flex-column justify-content-center align-items-center mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-primary-dark text-primary-dark fw-bold col-12">Du nouveau dans mes abonnements thématiques</h2>
-        
-        <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center justify-content-lg-start align-items-center col-12 col-lg-8">
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
+          <div class="tab-pane fade" id="nav-selection-documentalistes" role="tabpanel" aria-labelledby="nav-selection-documentalistes-tab">
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 pt-0 pb-3">
+                <h2 class="h5 text-primary-dark mb-2">Le centre de documentation technique et générale, à Paris</h2>
+                <p class="small fw-semibold mt-0 mb-2">Les mardi, mercredi et vendredi de 9h30 à 12h et de 14h à 17h30.l</p>
+            </div>
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 py-3">
+                <h2 class="h5 text-primary-dark mb-2">Le centre de documentation technique et générale, à Paris</h2>
+                <p class="small fw-semibold mt-0 mb-2">Du lundi au vendredi, de 8h30 à 12h et de 13h30 à 18h.</p>
+            </div>
+            <div class="border border-4 border-start-0 border-top-0 border-end-0 py-3">
+                <h2 class="h5 text-primary-dark mb-2">Le centre de ressources du Centre national de formation, Villiers-lès-Nancy</h2>
+                <p class="small fw-semibold mt-0 mb-2">
+                    Lundi fermé<br>
+                    Mardi 08h-12h 13h15-17h00<br>
+                    Mercredi 08h-12h 13h15-17h00<br>
+                    Jeudi 08h-12h 13h15-17h00<br>
+                    Vendredi 08h-12h 13h15-16h00<br>
+                    Ces horaires sont susceptibles d'être modifiés
+                </p>
             </div>
           </div>
-          
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
-            </div>
+          <div class="tab-pane fade py-4" id="nav-rdi" role="tabpanel" aria-labelledby="nav-rdi-tab">
+            <p class="d-flex align-items-center fw-semibold"><i class="bi bi-envelope-fill display-4 text-tertiary me-5"></i> <span>EMAIL : documentalistes@onf.fr</span></p>
+            <p class="d-flex align-items-center fw-semibold"><i class="bi bi-chat-dots-fill display-4 text-tertiary me-5"></i> <span>Chlorofil : groupe Biblio</span></p>
           </div>
-          
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
-            </div>
-          </div>
-
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex mt-3 col-4">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-2 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm w-50" href="">Plus d'infos</a>
-            </div>
+          <div class="tab-pane fade py-4" id="nav-documentalistes" role="tabpanel" aria-labelledby="nav-documentalistes-tab">
+            <p class="d-flex align-items-center fw-semibold"><i class="bi bi-envelope-fill display-4 text-tertiary me-5"></i> <span>EMAIL : documentalistes@onf.fr</span></p>
+            <p class="d-flex align-items-center fw-semibold"><i class="bi bi-chat-dots-fill display-4 text-tertiary me-5"></i> <span>Chlorofil : groupe Biblio</span></p>
           </div>
         </div>
-        <div class="d-flex flex-column mt-5 gap-1">
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Toutes les nouvelles revues</a>
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Gérer mes alertes sur mes revues</a>
-        </div>
-      </div>
-
-      <!-- DOCUMENTALISTES -->
-      <div class="documentalistes d-flex flex-column justify-content-center align-items-center bg-grey mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-primary-dark text-primary-dark fw-bold col-12">Sélection des documentalistes</h2>
-        
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center col-12 col-lg-8 gap-4">
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-lg-row mt-4 gap-lg-4">
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm">Toutes les documents ONF</a>
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Tous les E-Books</a>
-        </div>
-      </div>
-      
-      <!-- RDI -->
-      <div class="rdi d-flex flex-column justify-content-center align-items-center bg-grey mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-primary-dark text-primary-dark fw-bold col-12">Du nouveau dans mon réseau RDI</h2>
-        
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center col-12 col-lg-8 gap-4">
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/univers-thematique-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-4 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim dapibus risus, vel interdum eros.</p>
-              </div>
-              <a class="article--description__link btn btn-sm px-3 py-2 border border-1 rounded-1 bg-primary text-white fw-bold shadow-sm" href="">Plus d'infos</a>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-lg-row mt-4 gap-lg-4">
-          <a class="btn px-3 py-2 border border-1 rounded-1 bg-primary-dark text-white fw-bold shadow-sm" href="">Tout l'espace RDI</a>
-        </div>
-      </div>
-
-      <!-- BIBLIOTHEQUE -->
-      <div class="bibliotheque d-flex flex-wrap justify-content-center mb-5 p-4">
-        
-        <h2 class="mb-4 pb-2 border border-5 border-start-0 border-top-0 border-end-0 border-bottom border-primary text-primary-dark fw-bold col-12">Ma bibliothèque</h2>
-        
-        <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-center justify-content-lg-start align-items-start col-12 col-lg-8">
-          <div class="article-home d-flex col-6">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/bibliotheque-1.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link text-primary text-decoration-none fw-bold" href="">Plus d'infos ></a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex col-6">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/bibliotheque-2.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Arbres</p>
-                <h3 class="h5 text-secondary">Coomb, A.J.</h3>
-                <p class="multiline-ellipsis">500 espèces d'arbres du monde entier sont présentées dans ce guide d'identification...</p>
-              </div>
-              <a class="article--description__link text-primary text-decoration-none fw-bold" href="">Plus d'infos ></a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex col-6">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/bibliotheque-3.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link text-primary text-decoration-none fw-bold" href="">Plus d'infos ></a>
-            </div>
-          </div>
-          
-          <div class="article-home d-flex col-6">
-            <!-- image -->
-            <a class="" href=""><img class="img-fluid" src="/assets/bibliotheque-4.png" alt=""></a>
-            <!-- div description -->
-            <div class="article--description d-flex flex-column justify-content-between flex-fill bg-white ps-2 pt-2 pe-4 pb-4">
-              <div class="article--description__content">
-                <p class="text-primary lh-sm fw-bold">Un portail pour les <br>ressources bibl.</p>
-                <h3 class="h5 text-secondary text-uppercase">Nom aut</h3>
-                <p class="multiline-ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <a class="article--description__link text-primary text-decoration-none fw-bold" href="">Plus d'infos ></a>
-            </div>
-          </div>
-          <a class="btn px-4 py-2 border border-1 rounded-1 bg-primary text-white text-uppercase fw-bold shadow-sm" href="">Voir ma bibliothèque</a>
-        </div>
-
-        <aside class="d-flex flex-column align-items-center gap-1 bg-grey col-12 col-lg-4 h-100 p-4">
-          <h3 class="h3 text-primary-dark border border-2 border-start-0 border-top-0 border-end-0 border-bottom border-primary pb-2 mb-3 w-100">Mes recherches</h3>
-          <div class="w-100">
-            <a class="link-dark text-decoration-none" href="">
-              <article class="border border-4 border-start-0 border-top-0 border-end-0 border-bottom-4 mb-3 pb-2">
-                <h4 class="h6 mb-0 fw-bold">Sapin</h4>
-                <p class="mb-0">> Toutes les catégories</p>
-                <span class="text-primary fw-bold">Le 06.12.2022</span>
-              </article>
-            </a>
-            <a class="link-dark text-decoration-none" href="">
-              <article class="border border-4 border-start-0 border-top-0 border-end-0 border-bottom-4 mb-3 pb-2">
-                <h4 class="h6 mb-0 fw-bold">Structures</h4>
-                <p class="mb-0">> RDI</p>
-                <span class="text-primary fw-bold">Le 06.12.2022</span>
-              </article>
-            </a>
-            <a class="link-dark text-decoration-none" href="">
-              <article class="border border-4 border-start-0 border-top-0 border-end-0 border-bottom-4 mb-3 pb-2">
-                <h4 class="h6 mb-0 fw-bold">Forêt</h4>
-                <p class="mb-0">> Brèves</p>
-                <span class="text-primary fw-bold">Le 06.12.2022</span>
-              </article>
-            </a>
-            <a class="link-dark text-decoration-none" href="">
-              <article class="border border-4 border-start-0 border-top-0 border-end-0 border-bottom-4 mb-3 pb-2">
-                <h4 class="h6 mb-0 fw-bold">Déforestation</h4>
-                <p class="mb-0">> Evènements</p>
-                <span class="text-primary fw-bold">Le 06.12.2022</span>
-              </article>
-            </a>
-          </div>
-          
-          <a class="btn px-4 py-2 border border-1 rounded-1 bg-primary text-white text-uppercase fw-bold shadow-sm" href="">Voir toutes mes recherches</a>
-        </aside>
       </div>
     </main>
 
