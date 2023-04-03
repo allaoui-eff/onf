@@ -52,6 +52,9 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     width: 24px;
     height: 24px;
 }
+.tab-title-img {
+    width: 80px;
+}
 .search-modal {
     display: none;
     width: 100vw;
@@ -107,6 +110,12 @@ header {
 }
 //main
 main {
+    //LOGIN
+    .login {
+        button {
+            background: linear-gradient(to right, $primary, $secondary);
+        }
+    }
     //HOME
     .univers-biblio {
         section {

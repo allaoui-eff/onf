@@ -100,7 +100,7 @@
     </div>
 
     <main class="d-flex flex-column bg-grey p-4">
-      <div class="tabs-container mb-5 px-5">
+      <div class=" tabs-container mb-5 px-5">
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button class="nav-link" id="nav-modifier-document-tab" data-bs-toggle="tab" data-bs-target="#nav-modifier-document" type="button" role="tab" aria-controls="nav-modifier-document" aria-selected="false">Modifier un document</button>
@@ -113,16 +113,190 @@
           <div class="tab-pane fade" id="nav-modifier-document" role="tabpanel" aria-labelledby="nav-modifier-document-tab">
             <p>Lorem Ipsum</p>
           </div>
-          <div class="tab-pane fade" id="nav-saisir-document" role="tabpanel" aria-labelledby="nav-modifier-document-tab">
-            <p>Lorem Ipsum</p>
+          <div class="tab-pane fade show active" id="nav-saisir-document" role="tabpanel" aria-labelledby="nav-modifier-document-tab">
+            <form class="d-flex flex-column">
+              <div class="type-document pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/type-document.png" alt="" class="tab-title-img me-4">*Type de document</h2>
+                <div class="d-flex flex-wrap justify-content-center align-items-center shadow col-10 fw-semibold m-auto py-5">
+                  <div class="form-check d-flex mb-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-article-revue">
+                    <label class="form-check-label" for="type-document-article-revue">Article de revue</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-carte">
+                    <label class="form-check-label" for="type-document-carte">Carte</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-cdrom">
+                    <label class="form-check-label" for="type-document-cdrom">CD-ROM</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-chapitre-livre">
+                    <label class="form-check-label" for="type-document-chapitre-livre">Chapitre de livre</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-document">
+                    <label class="form-check-label" for="type-document-document">Document</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-dossier">
+                    <label class="form-check-label" for="type-document-dossier">Dossier</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-dvdrom">
+                    <label class="form-check-label" for="type-document-dvdrom">DVD-ROM</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-enregistrement-audio">
+                    <label class="form-check-label" for="type-document-enregistrement-audio">Enregistrement audio</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-enregistrement-video">
+                    <label class="form-check-label" for="type-document-enregistrement-video">Enregistrement vidéo</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-film">
+                    <label class="form-check-label" for="type-document-film">Film</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-livrable-veille">
+                    <label class="form-check-label" for="type-document-livrable-veille">Livrable de veille</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-livre">
+                    <label class="form-check-label" for="type-document-livre">Livre</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-memoire-eleve">
+                    <label class="form-check-label" for="type-document-memoire-eleve">Mémoire d'élève</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-periodique">
+                    <label class="form-check-label" for="type-document-periodique">Périodique</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-presentation">
+                    <label class="form-check-label" for="type-document-presentation">Présentation</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-rapport">
+                    <label class="form-check-label" for="type-document-rapport">Rapport</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-4">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-revue">
+                    <label class="form-check-label" for="type-document-revue">Revue</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-3">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-these">
+                    <label class="form-check-label" for="type-document-these">Thèse</label>
+                  </div>
+                  <div class="form-check d-flex mt-4 col-11">
+                    <input type="radio" name="type-de-document" class="form-check-input border-primary shadow-sm me-2 col-auto" id="type-document-essai">
+                    <label class="form-check-label" for="type-document-essai">Document d'essai</label>
+                  </div>
+                </div>
+              </div>
+              <div class="description-document pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/description-document.png" alt="" class="tab-title-img me-4">Description du document</h2>
+                <div class="d-flex flex-column  align-items-center fw-semibold shadow m-auto px-5 py-5 col-10">
+                  <div class="d-flex align-items-center col-12">
+                    <label for="description-document-titre" class="col-4">*Titre</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-titre">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-auteur" class="col-4">Auteur</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-auteur">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-auteur-collectif" class="col-4">Auteur collectif</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-auteur-collectif">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-editeur" class="col-4">Editeur</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-editeur">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-lieu-edition" class="col-4">Lieu d'édition</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-lieu-edition">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-parution" class="col-4">*Année de parution</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-parution">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-pages" class="col-4">Nb de pages</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-pages">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-langue" class="col-4">Langue</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-langue">
+                  </div>
+                  <div class="d-flex align-items-center col-12 mt-3">
+                    <label for="description-document-isbn" class="col-4">ISBN</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="description-document-isbn">
+                  </div>
+                </div>
+              </div>
+              <div class="resume pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/resume.png" alt="" class="tab-title-img me-4">Résumé</h2>
+                <div class="d-flex flex-column  align-items-center fw-semibold shadow m-auto px-5 py-4 col-10">
+                  <div class="d-flex align-items-center col-12">
+                    <label for="resume-resume" class="col-4">Résumé</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="resume-resume">
+                  </div>
+                </div>
+              </div>
+              <div class="indexation pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/indexation.png" alt="" class="tab-title-img me-4">Indexation</h2>
+                <div class="d-flex flex-column  align-items-center fw-semibold shadow m-auto px-5 py-4 col-10">
+                  <div class="d-flex align-items-center col-12">
+                    <label for="indexation-classement" class="col-4">Plan de classement</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="indexation-classement">
+                  </div>
+                </div>
+              </div>
+              <div class="agences-etudes pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/agences-etudes.png" alt="" class="tab-title-img me-4">Production des agences études</h2>
+                <div class="d-flex flex-column  align-items-center fw-semibold shadow m-auto px-5 py-4 col-10">
+                  <div class="d-flex align-items-start col-12">
+                    <legend class="h6 fw-bold col-4">Agence(s) études</legend>
+                    <div class="small d-flex flex-wrap gap-3 justify-content-between form-check mb-3 col-8">
+                      <div class="col-5">
+                        <input type="checkbox" class="form-check-input" id="grand-est1">
+                        <label class="form-check-label" for="grand-est1">Agence études Grand-Est</label>
+                      </div>
+                      <div class="col-5">
+                        <input type="checkbox" class="form-check-input" id="seine-nord">
+                        <label class="form-check-label" for="seine-nord">Agence études Seine-Nord</label>
+                      </div>
+                      <div class="col-5">
+                        <input type="checkbox" class="form-check-input" id="grand-est2">
+                        <label class="form-check-label" for="grand-est2">Agence études Grand-Est</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="description-document pt-4 pb-5">
+                <h2 class="text-primary-dark mb-4"><img src="assets/notice.png" alt="" class="tab-title-img me-4">Gestion de la notice</h2>
+                <div class="d-flex flex-column  align-items-center fw-semibold shadow m-auto px-5 py-4 col-10">
+                  <div class="d-flex align-items-center col-12">
+                    <label for="notice-historique" class="col-4">Historique des modifications</label>
+                    <input type="text" class="form-control border-primary shadow-sm" id="notice-historique">
+                  </div>
+                </div>
+                <a class="d-block h4 link-primary col-10 mx-auto mt-5 text-decoration-none">Enregistrer/modifier la notice</a>
+              </div>
+              <button class="btn btn-secondary btn-lg text-white rounded-3 m-auto px-5">Enregistrer</button>
+            </form>
           </div>
-          <div class="tab-pane fade show active" id="nav-theasurus" role="tabpanel" aria-labelledby="nav-theasurus-tab">
-            <h2><img src="" alt="">*Type de document</h2>
+          <div class="tab-pane fade" id="nav-theasurus" role="tabpanel" aria-labelledby="nav-theasurus-tab">
+            <p>Lorem Ipsum</p>
           </div>
           <div class="tab-pane fade" id="nav-recherche-contributions" role="tabpanel" aria-labelledby="nav-recherche-contributions-tab">
             <div class="border border-4 border-start-0 border-top-0 border-end-0 pt-0 pb-3">
                 <h2 class="h5 text-primary-dark mb-2">Le centre de documentation technique et générale, à Paris</h2>
-                <p class="small fw-semibold mt-0 mb-2">Les mardi, mercredi et vendredi de 9h30 à 12h et de 14h à 17h30.l</p>
+                <p class="small fw-semibold mt-0 mb-2">Les mardi, mercredi et vendredi de 9h30 à 12h et de 14h à 17h30.</p>
             </div>
             <div class="border border-4 border-start-0 border-top-0 border-end-0 py-3">
                 <h2 class="h5 text-primary-dark mb-2">Le centre de documentation technique et générale, à Paris</h2>
