@@ -15,7 +15,7 @@ $custom-theme-colors: (
     "primary-dark": #00652E,
     "tertiary": #17707e,
     "grey": #eeeeee,
-    "black": #1e1e1e,
+    "black": #8b8b8b,
     "red": #e04f5f,
 );
 
@@ -27,7 +27,10 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 /* CUSTOM CSS */
 //Global
-.logo {
+.logo-rf {
+    max-width: 80px;
+}
+.logo-onf {
     max-width: 200px;
 }
 .nav-link {
@@ -55,6 +58,16 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 .tab-title-img {
     width: 80px;
 }
+.btn-outline-primary, .btn-outline-primary-dark, .btn-outline-secondary {
+    background-color: $white;
+    &:hover {
+        color: $white;
+    }
+}
+.btn-outline-primary-dark {
+    color: #1e1e1e;
+    border: 1px solid #00652E;
+}
 //PAGE RECHERCHE
 .search-modal {
     display: none;
@@ -66,6 +79,15 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
         max-width: 900px;
     }
 }
+.pagination {
+    li a {
+        color: #00652E;
+        &:hover{
+            background: #00652E;
+            color: white;
+        }
+    }
+}
 //header
 header {
     .container {
@@ -73,8 +95,12 @@ header {
     }
 }
 .hero {
-    height: 600px;
+    height: 300px;
+    background: url('../assets/hero-recherche.jpg');        
+    background-size: cover;
+    background-position: bottom;
     &.hero-home {
+        height: 500px;
         background: url('../assets/hero-home.jpg');        
         background-size: cover;
         background-position: bottom;
@@ -91,7 +117,7 @@ header {
     }
 }
 .form-container {
-    height: 250px;
+    height: 200px;
     .form-search--container {
         .form-search {
             .form-control {
@@ -112,11 +138,7 @@ header {
 //main
 main {
     //LOGIN
-    .login {
-        button {
-            background: linear-gradient(to right, $primary, $secondary);
-        }
-    }
+    
     //HOME
     .univers-biblio {
         section {
@@ -128,7 +150,7 @@ main {
         }
     }
     .abonnement-thematiques, .bibliotheque {
-        section {
+        div {
             .article-home {
                 img {
                     max-width: 150px;
@@ -145,6 +167,28 @@ main {
             }
         }
     }
+    .carousel {
+        .carousel-indicators {
+            button {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color: #828278;
+                &.active {
+                    background-color: #00652E;
+                }
+            }
+        }
+        .carousel-inner {
+            .carousel-item {
+                .article-home {
+                    img {
+                        min-width: 180px;
+                    }
+                }
+            }
+        }
+    }
     //INFOS PRATIQUES
     .tabs-container {
         .nav-link {
@@ -156,6 +200,10 @@ main {
                 color: $white;
             }
         }
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
     }
     //ABONNEMENTS
     .accordion {
