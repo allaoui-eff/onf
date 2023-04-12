@@ -58,17 +58,31 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 .tab-title-img {
     width: 80px;
 }
+button {
+    span.dropdown-toggle {
+        &::after {
+            vertical-align: 0.15rem;
+            font-size: 20px;
+        }
+    }
+}
 .btn-outline-primary, .btn-outline-primary-dark, .btn-outline-secondary {
     background-color: $white;
     &:hover {
         color: $white;
+        i {
+            color: $white;
+        }
     }
 }
 .btn-outline-primary-dark {
     color: #1e1e1e;
     border: 1px solid #00652E;
+    i {
+        color: #00652E;
+    }
 }
-//PAGE RECHERCHE
+//RECHERCHE
 .search-modal {
     display: none;
     width: 100vw;
@@ -77,6 +91,23 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     > div {
         width: 100%;
         max-width: 900px;
+    }
+}
+.doc {
+    padding-bottom: 20px;
+    .doc__icones--secondaires {
+        display: flex;
+        opacity: 0;
+        position: relative;
+        transform: translateY(-10px);
+        transition: .3s ease;
+    }
+    &:hover {
+        
+        .doc__icones--secondaires {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 }
 .pagination {
@@ -92,6 +123,13 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 header {
     .container {
         max-width: none;        
+    }
+    li.dropdown {
+        a {
+            i {
+                font-size: 30px;
+            }
+        }
     }
 }
 .hero {
@@ -213,6 +251,11 @@ main {
             }
         }
     }
+    .bi-filter-square-fill {
+        &::after {
+            font-size: 20px;
+        }
+    }
     //NOS CENTRES
     .centres-chiffres-img {
         min-width: 200px;
@@ -222,5 +265,8 @@ main {
     }
     .trois-sites p {
         max-width: 500px;
+        i {
+            padding: 3px 5px;
+        }
     }
 }
