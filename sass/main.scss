@@ -88,12 +88,16 @@ button {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
     > div {
         width: 100%;
         max-width: 900px;
     }
 }
 .doc {
+    .flex-wrap a {
+        aspect-ratio: 3 / 4.18;
+    }
     padding-bottom: 20px;
     .doc__icones--secondaires {
         display: flex;
@@ -101,6 +105,9 @@ button {
         position: relative;
         transform: translateY(-10px);
         transition: .3s ease;
+    }
+    p {
+        margin-bottom: 5px;
     }
     &:hover {
         
@@ -137,6 +144,9 @@ header {
     background: url('../assets/hero-recherche.jpg');        
     background-size: cover;
     background-position: bottom;
+    &.hero-connexion {
+        height: 225px;
+    }
     &.hero-home {
         height: 500px;
         background: url('../assets/hero-home.jpg');        
@@ -178,6 +188,9 @@ main {
     //LOGIN
     
     //HOME
+    div.ratio.ratio-16x9 {
+        max-width: 1200px;
+    }
     .univers-biblio {
         section {
             .article-home {
